@@ -7,7 +7,7 @@ const app = require("./app");
 const port = 3000;
 
 //conexion a la bd
-db.authenticate()
+/*db.authenticate()
   .then(() => {
     db.sync();
     console.log("conexion ok");
@@ -20,7 +20,8 @@ db.authenticate()
   .catch((error) => {
     console.log(error);
   });
-
+*/
+app.listen(port, () => {});
 //Routing
 //app.use("/", usuarioRoutes);
 
