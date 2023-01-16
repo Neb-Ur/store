@@ -25,6 +25,15 @@ const port = process.env.PORT || 5000;
 const host = process.env.HOST || "0.0.0.0";
 app.listen(port, host, () => {
   console.log("start ok 1 2");
+  db.authenticate()
+    .then(() => {
+      db.sync();
+      console.log("conexion ok");
+      //creacion del servidor
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 });
 //Routing
 //app.use("/", usuarioRoutes);
