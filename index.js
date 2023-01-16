@@ -4,8 +4,8 @@ const usuarioRoutes = require("./routes/usuarioRoutes.js");
 const db = require("./config/db.js");
 //crear app
 const app = require("./app");
-const port = 3000;
 
+require("dotenv").config({ path: ".env" });
 //conexion a la bd
 /*db.authenticate()
   .then(() => {
@@ -21,7 +21,11 @@ const port = 3000;
     console.log(error);
   });
 */
-app.listen(port, () => {});
+const port = process.env.PORT || 5000;
+const host = process.env.HOST || "0.0.0.0";
+app.listen(port, host, () => {
+  console.log("start ok");
+});
 //Routing
 //app.use("/", usuarioRoutes);
 
