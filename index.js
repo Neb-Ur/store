@@ -24,7 +24,7 @@ require("dotenv").config({ path: ".env" });
 const port = process.env.PORT || 5000;
 const host = process.env.HOST || "0.0.0.0";
 app.listen(port, host, () => {
-  console.log("start ok 1");
+  console.log("start ok 1 2");
 });
 //Routing
 //app.use("/", usuarioRoutes);
