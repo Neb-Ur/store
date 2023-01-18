@@ -18,6 +18,7 @@ var controller = {
     user.nombre = req.body.nombre;
     user.email = req.body.email;
     user.password = req.body.password;
+    console.log(user);
     user.save((err, save) => {
       console.log(err);
       console.log(save);
