@@ -27,7 +27,6 @@ var controller = {
 
       return res.status(200).send({ save });
     });
-    return res.status(200).send({ user });
   },
 };
 
